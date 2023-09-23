@@ -39,7 +39,7 @@
 
   <h4 style="margin-bottom: 1em;  display: flex; align-items: center; justify-content: center;">Preencha o formulario a seguir</h4>
   
-  <form style="flex-wrap: wrap; display: flex; justify-content: center; align-items: center; flex-direction: column">
+  <form id="meuFormulario" style="flex-wrap: wrap; display: flex; justify-content: center; align-items: center; flex-direction: column">
     <div style="flex-wrap: wrap; display: flex;justify-content: center; align-items: center; flex-direction: row" class="form-row">
       <div style="margin: .5em;" class="form-group col-md-5">
         <label for="nome">Nome</label>
@@ -67,16 +67,16 @@
     </div>
     <div style="margin: .5em;" class="form-group col-md-5">
       <label for="telefone">Telefone</label>
-      <input type="number" class="form-control" id="telefone" placeholder="000000000">
+      <input type="number" class="form-control" id="telefone" placeholder="(XX) XXXX-XXXX">
     </div>
     <div style="margin: .5em;" class="form-group col-md-5">
       <label for="cpf">CPF</label>
-      <input type="number" class="form-control" id="cpf" placeholder="000.000.000-00">
+      <input type="number" class="form-control" id="cpf" placeholder="XXX.XXX.XXX-XX">
     </div>
     <div style="margin: .5em;" class="form-group col-md-5">
       <label for="cep">CEP</label>
-      <input type="number" class="form-control" id="cep" size="10" maxlength="9"
-      onblur="pesquisacep(this.value);" >
+      <input type="text" class="form-control" id="cep" size="10" maxlength="9" placeholder="XXXXX-XXX"
+      onblur="pesquisacep(this.value);">
     </div>
     <div style="margin: .5em;" class="form-group col-md-5">
       <label for="rua">Rua</label>
@@ -92,7 +92,7 @@
     </div>
     <div style="margin: .5em;" class="form-group col-md-5">
       <label for="bairo">Bairro</label>
-      <input type="text" class="form-control" id="bairo">
+      <input type="text" class="form-control" id="bairro">
     </div>
     <div style="margin: .5em;" class="form-group col-md-5">
       <label for="cidade">Cidade</label>
@@ -108,7 +108,7 @@
     </div>
         
     <div style="margin: 1em;  display: flex; align-items: center; justify-content: center;" class="form-group col-md-5">
-      <button id="submitButton" class="btn btn-primary">Enviar</button>
+      <button id="submitButton" onclick="validar()" type="button" class="btn btn-primary">Enviar</button>
     </div>
   </form>
 
